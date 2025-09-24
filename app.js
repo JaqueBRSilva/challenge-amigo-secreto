@@ -8,15 +8,15 @@ let resultado = document.querySelector("#resultado");
 function adicionarAmigo() {
   let campoDigiteNome = document.querySelector("input").value;
 
-  if (campoDigiteNome.length != 0 && !listaAmigosAdd.includes(campoDigiteNome)) {
+  if (campoDigiteNome.length != 0 && !listaAmigosAdd.includes(campoDigiteNome.toUpperCase())) {
     listaAmigosAdd.push(campoDigiteNome.toUpperCase());
-    listaAmigos.innerHTML += `<li>${campoDigiteNome}</li>`;
+    listaAmigos.innerHTML += `<li>${campoDigiteNome.toUpperCase()}</li>`;
     document.querySelector("input").value = "";
 
   } else {
     if (campoDigiteNome.length == 0) {
       alert("Por favor, insira um nome");
-    } else if (listaAmigosAdd.includes(campoDigiteNome)) {
+    } else if (listaAmigosAdd.includes(campoDigiteNome.toUpperCase())) {
       alert("Este nome já foi adicionado anteriormente");
     }
   }
