@@ -29,8 +29,9 @@ function sortearAmigo() {
     alert("Há menos de 2 amigos na lista. Adicione mais pessoas para sortear.");
   }
 
-  let indexSorteado = Math.floor(Math.random() * listaAmigosAdd.length);
+  resultado.innerHTML = ''
 
+  let indexSorteado = Math.floor(Math.random() * listaAmigosAdd.length);
   let amigoSorteado = listaAmigosAdd[indexSorteado];
 
   resultado.innerHTML += `<li>${amigoSorteado.toUpperCase()}</li>`;
